@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+      }
+      #conatainer {
+        border: 2px solid black;
+        padding: 30px;
+        background-color: lightgreen;
+        text-align: center;
+      }
+      button {
+        padding: 10px 15px;
+        background-color: lightblue;
+        border-radius: 8px;
+        border-width: 2px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="conatainer">
+      <h1>COUNTER</h1>
+      <h1 id="mylabel">0</h1>
+      <div>
+        <button id="increaseButton">Increase</button>
+        <button id="decreaseButton">Decrease</button>
+        <button id="resetButton">Reset</button>
+      </div>
+    </div>
+  </body>
+
+  <script>
+    let count = 0;
+    document.getElementById("increaseButton").onclick = function () {
+      count += 1;
+      document.getElementById("mylabel").innerHTML = count;
+    };
+    document.getElementById("decreaseButton").onclick = function () {
+      count -= 1;
+      document.getElementById("mylabel").innerHTML = count;
+    };
+    document.getElementById("resetButton").onclick = function () {
+      let count = 0;
+      documentscript.getElementById("mylabel").innerHTML = count;
+    };
+  </script>
+
+  <!-- <script>
+    function add(a, b) {
+      return a + b;
+    }
+    let add = (a, b) => a + b;
+
+    function multiply(a, b) {
+      return a * b;
+    }
+    let multiply = (a, b) => a * b;
+
+    function greet(name) {
+      return "hello," + name;
+    }
+    let greet = (name) => "hello," + name;
+  </script> -->
+</html>
